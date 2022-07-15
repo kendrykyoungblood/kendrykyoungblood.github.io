@@ -1,0 +1,237 @@
+html[data-theme="light"] {
+	--primary-1: #ffffff;
+	--primary-1-trans: 255, 255, 255;
+	--primary-2: #3C328C;
+	--secondary-1: #000000;
+	--secondary-2: #F1CA55;
+	--accent-1: #747474;
+	--accent-2: #ece8ff;
+	--accent-2-trans: 236, 232, 255;
+	--accent-3: #109391;
+	--accent-4: #cccccc;
+
+	--green: #388924;
+	--red: #EB0000;
+}
+html[data-theme="dark"] {
+	--primary-1: #000000;
+	--primary-1-trans: 0, 0, 0;
+	--primary-2: #CDC1FF;
+	--secondary-1: #ffffff;
+	--secondary-2: #D0A011;
+	--accent-1: #AAAAAA;
+	--accent-2: #2a283f;
+	--accent-2-trans: 42, 40, 63;
+	--accent-3: #17BEBB;
+	--accent-4: #505050;
+
+	--green: #44d221;
+	--red: #EB0000;
+}
+
+:root {
+	--bg: var(--primary-1);
+	--bg-2: var(--accent-2);
+	--bg-menu: rgba(var(--accent-2-trans), 0.5);
+	--bg-header: rgba(var(--accent-2-trans), 0.9);
+	--bg-message: rgba(var(--primary-1-trans), 0.5);
+
+	--txt: var(--secondary-1);
+	--txt-2: var(--accent-1);
+	--txt-link: var(--accent-3);
+
+	--border-menu: var(--primary-2);
+	--border-form: var(--accent-4);
+
+	--shadow: rgba(0, 0, 0, 0.7);
+	--hover: 0.7;
+
+	--margin: 25px;
+
+	--header-height: 65px;
+	--max-width: 1200px;
+	--max-width-large: 1000px;
+	--max-width-medium: 600px;
+	--max-width-small: 400px;
+
+	--trans-fast: 200ms;
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	
+	color: var(--txt);
+	background-color: var(--bg);
+}
+
+.App {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.App > * {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Lora', serif;
+}
+
+a {
+	color: var(--primary-2);
+	text-decoration: none;
+	transition: opacity var(--trans-fast);
+}
+a:hover {
+	opacity: var(--hover);
+}
+
+strong {
+	font-weight: 600;
+}
+
+sup {
+	vertical-align: top;
+	font-size: 0.7em;
+}
+
+button {
+	cursor: pointer;
+	width: fit-content;
+	padding: 15px 50px;
+
+	color: var(--bg);
+	background-color: var(--accent-3);
+
+	transition: opacity var(--trans-fast);
+}
+button:hover {
+	opacity: var(--hover);
+}
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+/* end Global */
+
+/* Main */
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--margin);
+}
+main > * {
+	width: 100%;
+	max-width: calc(var(--max-width) + (var(--margin) * 2));
+	padding: 0 var(--margin);
+}
+/* end Main */
+
+/* Section */
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+section > * {
+	width: 100%;
+}
+section p {
+	line-height: 1.5;
+}
+/* end Section */
+
+/* Prevent text enlargement on landscape iOS */
+@media (orientation: landscape) {
+	html {
+		-webkit-text-size-adjust: 100%;
+	}
+}
+
+/* Utilities */
+section > ul {
+	padding-left: 1em;
+}
+section > ul li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.ext-link {
+	color: var(--txt-link);
+}
+.ext-link:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
+.arrow {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	transition: color var(--trans-fast), gap var(--trans-fast);
+}
+.arrow:hover {
+	gap: 20px;
+	text-decoration: none;
+}
+
+.img-large {
+	order: -1;
+	margin-top: calc(-1 * var(--margin));
+	padding: 0;
+}
+.img-large .img-container {
+	height: calc(100vh - var(--header-height));
+	width: 100vw;
+}
+
+@media screen and (min-width: 851px), screen and (max-height: 400px) {
+	.split {
+		display: block;
+		max-width: calc(var(--max-width) + (var(--margin) * 2));
+		padding: 0 var(--margin);
+	}
+	.split > * {
+		margin: auto;
+	}
+	.split > h1 {
+		margin-bottom: var(--margin);
+		padding: 0;
+	}
+	.split > section {
+		width: auto;
+		min-width: 250px;
+		margin-bottom: var(--margin);
+		padding: 0;
+	}
+	.img-large {
+		order: initial;
+		width: fit-content;
+		float: left;
+	}
+	.img-large .img-container {
+		height: auto;
+		width: 450px;
+		margin: 0 var(--margin) var(--margin) 0;
+		object-fit: cover;
+	}
+}
+/* end Utilities */

@@ -1,0 +1,72 @@
+/* Quotes */
+.full-screen {
+	height: calc(100vh - var(--header-height) - (var(--margin) * 2));
+}
+
+.quotes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: var(--margin);
+
+	font-family: 'Indie Flower', cursive;
+	font-size: 3.3em;
+}
+
+.quotes > q {
+	width: 70%;
+}
+.quotes q:nth-child(even) {
+	align-self: flex-end;
+	text-align: right;
+}
+
+.quotes + p {
+	margin-top: var(--margin);
+	text-align: right;
+	font-family: 'Lora', serif;
+	font-size: 1.2em;
+}
+/* end Quotes */
+
+.Home {
+	gap: calc(1.5 * var(--margin));
+}
+.Home h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.videos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: var(--margin);
+}
+.videos > iframe {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+	max-width: 500px;
+}
+
+.poet-life-logo > * {
+	max-width: var(--max-width-small);
+	text-align: center;
+}
+.poet-life-logo > a {
+	opacity: 1;
+}
+.poet-life-logo > a:hover {
+	opacity: var(--hover);
+}
+.poet-life-logo .img-container {
+	background-color: black;
+}
+
+@media screen and (max-width: 900px) {
+	.quotes {
+		font-size: 2.3em;
+	}
+}

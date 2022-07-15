@@ -1,0 +1,120 @@
+.contact-form {
+	width: calc(100% - (var(--margin) * 2));
+	max-width: var(--max-width-medium);
+	padding: var(--margin);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--margin);
+
+	border: 2px solid var(--border-form);
+	border-radius: 12px;
+}
+
+/* Form items */
+.contact-form > * {
+	width: 100%;
+}
+.contact-form div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.contact-form > .item {
+	align-items: stretch;
+}
+/* end Form items */
+
+.contact-form label {
+	font-size: 1.2em;
+}
+label.required::after {
+	content: '*';
+	color: var(--red);
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+	font-family: inherit;
+	font-size: 1em;
+
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form button:focus {
+	outline: 2px solid var(--primary-2);
+}
+.contact-form input,
+.contact-form textarea {
+	color: inherit;
+	background-color: var(--bg);
+	border: 1px solid var(--border-form);
+}
+
+.contact-form input {
+	padding: 10px;
+}
+.contact-form input::placeholder {
+	font-style: italic;
+}
+
+.contact-form textarea {
+	height: 100px;
+	padding: 5px 10px;
+	resize: none;
+}
+
+.contact-form button {
+	width: fit-content;
+}
+/* end Inputs */
+
+.contact-form .inline {
+	flex-direction: row;
+}
+.inline > .item {
+	width: 100%;
+}
+.inline > .item > * {
+	width: 100%;
+}
+
+div.message {
+	width: fit-content;
+	flex-direction: row;
+	gap: 15px;
+	background-color: var(--bg-message);
+	border-radius: 5px;
+}
+div.message.success {
+	color: var(--green);
+}
+div.message.failure {
+	color: var(--red);
+}
+
+section.success {
+	width: calc(100% - (2 * var(--margin)));
+	padding: 0;
+	text-align: center;
+}
+section.success > * {
+	width: fit-content;
+}
+section.success a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+section.success svg {
+	font-size: 100px;
+	color: var(--green);
+}

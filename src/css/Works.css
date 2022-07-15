@@ -1,0 +1,56 @@
+.Works {
+	max-width: calc(var(--max-width) + (var(--margin) * 2));
+	padding: 0 var(--margin);
+}
+.Works > h1 {
+	padding: 0;
+}
+
+.poem {
+	max-width: var(--max-width-large);
+	padding: 0;
+	overflow: hidden;
+
+	background-color: var(--bg-2);
+	border-radius: 12px;
+}
+
+.poem > h2 {
+	cursor: pointer;
+	padding: 12px var(--margin);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--primary-2);
+	text-decoration: none;
+
+	transition: opacity var(--trans-fast);
+}
+.poem > h2:hover {
+	opacity: var(--hover);
+}
+
+.poem > h2 svg {
+	transition: transform var(--trans-fast);
+}
+
+.poem > div {
+	padding: var(--margin);
+	padding-top: 0;
+	display: none;
+
+	white-space: pre;
+	line-height: 1.5;
+	font-family: 'Lora', serif;
+}
+.poem > div div {
+	overflow-x: auto;
+}
+.poem > .active ~ div {
+	display: block;
+}
+
+.poem > .active svg {
+	transform: rotate(90deg);
+}
