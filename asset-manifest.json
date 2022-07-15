@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d66ffd28.css",
-    "main.js": "/static/js/main.08be00ba.js",
+    "main.js": "/static/js/main.43bfa7b8.js",
     "static/media/Kendryk Youngblood – Performance.jpg": "/static/media/Kendryk Youngblood – Performance.7c8116dc4cb5711f6d2c.jpg",
     "static/media/Kendryk Youngblood – Performance.webp": "/static/media/Kendryk Youngblood – Performance.587525de6ec3f19d6997.webp",
     "static/media/Kendryk Youngblood – Poet Life.jpg": "/static/media/Kendryk Youngblood – Poet Life.ec1362d87a922271efd4.jpg",
@@ -10,10 +10,10 @@
     "static/media/Poet Resume_CV.pdf": "/static/media/Poet Resume_CV.4493555416f050d43dd3.pdf",
     "index.html": "/index.html",
     "main.d66ffd28.css.map": "/static/css/main.d66ffd28.css.map",
-    "main.08be00ba.js.map": "/static/js/main.08be00ba.js.map"
+    "main.43bfa7b8.js.map": "/static/js/main.43bfa7b8.js.map"
   },
   "entrypoints": [
     "static/css/main.d66ffd28.css",
-    "static/js/main.08be00ba.js"
+    "static/js/main.43bfa7b8.js"
   ]
 }
