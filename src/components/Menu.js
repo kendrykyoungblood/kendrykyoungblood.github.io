@@ -57,9 +57,9 @@ const Menu = () => {
 				<li onClick={handleClick}>
 					<NavLink to="/artist-bio">Artist Bio</NavLink>
 				</li>
-				<li onClick={handleClick}>
+				{/* <li onClick={handleClick}>
 					<NavLink to="/contests">Contests</NavLink>
-				</li>
+				</li> */}
 				<li onClick={handleClick}>
 					<NavLink to="/published-works">Published Works</NavLink>
 				</li>
